@@ -1,0 +1,32 @@
+body{
+    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+}
+.form-container{
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;;
+}
+form{
+    margin: auto;
+    width: 35%;
+    height: 80vh;
+    border: 10px solid darkblue;
+    background: skyblue;
+}
+.input-container{
+    margin: 40px 40px;
+}
+input{
+    display: inline;
+}
+label{
+    color: white;
+}
+select{
+    width: 50%;
+    margin: 20px 0px;
+}
+button{
+    border-radius: 5px;
+    border-color: transparent;
+}

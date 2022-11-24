@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+	<title>Predictions</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+
+</head>
+
+<!-- Adding some style to table (OPTIONAL) -->
+<style type="text/css">
+
+	th:tr{
+		color: blue;
+
+	}
+	tr:nth-of-type(2n){
+		border: 1px solid black;
+		background-color: rgba(150, 150, 150, 0.5);
+
+	}
+
+	td{
+		padding: 8px 8px;
+		border: 1px solid black;
+	}
+</style>
+
+<body>
+
+<center>
+
+<table style="margin-top: 150px;">
+<!-- Table headers -->
+	<th>
+		<tr style="color: white; ">
+		<td><b>Time Span</b></td>
+		<td><b>Prediction No %</b></td>
+		<td><b>Prediction Yes %</b></td>
+</tr>
+	</th>
+
+<!-- For loop logic of jinja template -->
+{%for item in items%}
+
+<!-- table rows -->
+<tr>
+	<td><b>{{item}}</b></td>
+	<td><b>{{Dictionary[item][0] }}</b></td>
+	<td><b>{{Dictionary[item][1] }}</b></td>
+</tr>
+{%endfor%}
+
+
+
+</table>
+
+</center>
+</body>
+</html>

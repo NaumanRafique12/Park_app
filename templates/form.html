@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--    <link rel="stylesheet" href="style.css">-->
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+    <title>Alisha Parking App</title>
+</head>
+<body>
+    <div class="form-container">
+        <form action="{{ url_for('predict')}}"method="post" style="margin-top: 120px;">
+            <div class="input-container">
+                <input type="date" name="date" id="date" size="40" required="required">
+            </div>
+            <div class="input-container">
+                <label size="50"><b>From Starting</b></label><br>
+                <input type="text" size="30" name="starting" id="starting">
+            </div>
+            <div class="input-container">
+                <label size="30"><b>End/to</b></label><br>
+                <input size="30" type="text" name="Ending" id="Ending">
+            </div>
+            <div class="input-container">
+                <label size="30"><b>Day of week</b></label><br>
+                <select  name="dow">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                </select>
+                <input type="checkbox" size="50" name="holiday" id="holiday" >
+                <label size="30"><b>Holiday</b></label>
+<!--                <input type="text" name="" placeholder="holiday" id="" style="width: 20%;">-->
+            </div>
+            <div class="input-container">
+                <div class="button_cont" align="center"><a class="button_css" href="http://bit.ly/breast-cancer-ml-project" target="_blank" rel="nofollow noopener">
+            <button type="submit" size="50" class="btn btn-primary btn-block btn-large"><strong>Predict Marks</strong></button></a>
+        </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
